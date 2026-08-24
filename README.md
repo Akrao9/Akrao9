@@ -26,7 +26,3 @@ Software Engineer (AI/ML) at **Resonate Technologies**, working on RAG and self-
 #### Stack
 
 `Python` `PyTorch` `JAX` `Hugging Face` `CUDA/Triton` `AWS (SageMaker, Lambda)` `Docker` `Kubernetes` `FastAPI` `PostgreSQL`
-
----
-
-![GitHub stats](https://github-readme-stats.vercel.app/api?username=Akrao9&show_icons=true&theme=default&hide_title=true&hide_border=true)
