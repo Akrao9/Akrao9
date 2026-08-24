@@ -1,4 +1,4 @@
-### Hi, I'm Ankamma — I build generative AI and ML systems, from research to production.
+### Hi, I'm Ankamma Rao — I build generative AI and ML systems, from research to production.
 
 Software Engineer (AI/ML) at **Resonate Technologies**, working on RAG and self-correcting LLM pipelines for medical coding. Previously backend/ML at Digital Factory Inc. MS in Computer Science from NJIT.
 
