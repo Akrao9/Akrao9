@@ -1,6 +1,6 @@
 ### Hi, I'm Ankamma Rao — I build generative AI and ML systems, from research to production.
 
-Software Engineer (AI/ML), working on RAG and self-correcting LLM pipelines for medical coding. Previously backend/ML at Digital Factory Inc. MS in Computer Science from NJIT.
+Software Engineer (AI/ML), working on RAG and self-correcting LLM pipelines. Previously backend/ML at Digital Factory Inc. MS in Computer Science from NJIT.
 
 - 🔭 Currently training **Linarix**, a ~900M-parameter hybrid-attention text-to-image diffusion model — [try it on Hugging Face](https://huggingface.co/spaces/akrao9/Linarix-v2-T2I)
 - 🛠️ I ship upstream fixes to real ML infra — merged PRs in [`Lightning-AI/pytorch-lightning`](https://github.com/Lightning-AI/pytorch-lightning) (31k★) and [`fla-org/flash-linear-attention`](https://github.com/fla-org/flash-linear-attention) (5.6k★)
