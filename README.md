@@ -15,13 +15,7 @@ Software Engineer (AI/ML), working on RAG and self-correcting LLM pipelines. Pre
 
 **[pytorch-lightning](https://github.com/Lightning-AI/pytorch-lightning)** — diagnosed and fixed a training UX bug where progress bars/ETAs were wrong for iterable datasets + `max_steps` + gradient accumulation. Root-caused a unit mismatch between optimizer steps and batch-level updates, added regression tests, and landed the fix upstream.
 
-#### Research Projects
 
-| Project | Description |
-|---|---|
-| [Linarix](https://huggingface.co/spaces/akrao9/Linarix-v2-T2I) | ~900M-param hybrid GDN2/softmax-attention flow-matching text-to-image model, Qwen3.5-4B conditioning, near-flat inference memory scaling to batch 90 |
-| [VGGT-LACT](https://github.com/Akrao9/VGGT-LACT) | Linear-memory 3D scene reconstruction — replaces quadratic attention in VGGT with LaCT-style fast-weight GLU blocks; 2.1x throughput, 59% less VRAM |
-| [MidMamba](https://github.com/Akrao9/MidMamba-Optimal-Execution) | PPO + Mamba-2 encoder for optimal trade execution on L2 order-book data, benchmarked against TWAP/Almgren-Chriss |
 
 #### Stack
 
