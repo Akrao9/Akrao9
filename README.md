@@ -1,22 +1,46 @@
-### Hi, I'm Ankamma Rao — I build generative AI and ML systems, from research to production.
+# Hi, I'm Ankamma Rao Bandi
 
-Software Engineer (AI/ML), working on RAG and self-correcting LLM pipelines. MS in Computer Science from NJIT.
+Machine Learning Engineer focused on diffusion models, linear attention, and efficient training and inference. I build generative models and production LLM systems, and contribute fixes to open-source ML infrastructure.
 
-- 🔭 Currently training **Linarix**, a ~900M-parameter hybrid-attention text-to-image diffusion model — [try it on Hugging Face](https://huggingface.co/spaces/akrao9/Linarix-v2-T2I)
-- 🛠️ I ship upstream fixes to real ML infra — merged PRs in [`Lightning-AI/pytorch-lightning`](https://github.com/Lightning-AI/pytorch-lightning) (31k★) and [`fla-org/flash-linear-attention`](https://github.com/fla-org/flash-linear-attention) (5.6k★)
-- 🧠 Focus areas: diffusion models, flow matching, linear attention, multimodal learning, RAG
-- 📫 Reach me: [LinkedIn](https://www.linkedin.com/in/ankamma-rao-bandi-35ab7616b/) · [Hugging Face](https://huggingface.co/akrao9) · ak.rao.bandi2@gmail.com
+MS in Computer Science from New Jersey Institute of Technology.
 
----
+## Featured project: Linarix
 
-#### Open Source Contributions
+**[Linarix](https://github.com/Akrao9/Linarix-Text-to-Image-Hybrid-Attention-Diffusion-Model)** is a text-to-image flow-matching model with an approximately **890M-parameter denoiser**, a GatedDeltaNet-2 condition encoder, a full-attention DDT decoder, and frozen Qwen3.5-4B text conditioning.
 
-**[flash-linear-attention](https://github.com/fla-org/flash-linear-attention)** — extended backend dispatch for a fused TileLang kernel (FlashQLA) to support NVIDIA SM120 (Blackwell) GPUs, which previously fell back to a slower Triton path. Added grad-state-aware routing and parametrized parity tests. Validated on physical RTX PRO 6000 Blackwell hardware: within 0.6% parity of reference, up to 2.6x forward-pass speedup over Triton across sequence lengths to 32K tokens.
+- Built the model and training pipeline in PyTorch, with distributed training and memory-efficient optimization.
+- Supports **1024 x 1024 generation**, STORK sampling, batched inference, and VAE slicing.
+- Published model weights and an interactive Hugging Face demo.
 
-**[pytorch-lightning](https://github.com/Lightning-AI/pytorch-lightning)** — diagnosed and fixed a training UX bug where progress bars/ETAs were wrong for iterable datasets + `max_steps` + gradient accumulation. Root-caused a unit mismatch between optimizer steps and batch-level updates, added regression tests, and landed the fix upstream.
+[Code](https://github.com/Akrao9/Linarix-Text-to-Image-Hybrid-Attention-Diffusion-Model) · [Model weights](https://huggingface.co/akrao9/Linarix-v2) · [Try the demo](https://huggingface.co/spaces/akrao9/Linarix-v2-T2I) · [Training details](https://github.com/Akrao9/Linarix-Text-to-Image-Hybrid-Attention-Diffusion-Model/blob/main/docs/training.md)
 
+## Open-source contributions
 
+### Flash Linear Attention - merged
 
-#### Stack
+Enabled FlashQLA BF16 forward dispatch on **NVIDIA SM120 Blackwell GPUs**, with gradient-state safeguards, dtype checks, and parity tests. Benchmarks on an RTX PRO 6000 Blackwell measured up to **2.62x forward-pass speedup over the Triton backend** for the tested GatedDeltaNet operator configurations.
 
-`Python` `PyTorch` `JAX` `Hugging Face` `CUDA/Triton` `AWS (SageMaker, Lambda)` `Docker` `Kubernetes` `FastAPI` `PostgreSQL`
+[PR #1094](https://github.com/fla-org/flash-linear-attention/pull/1094) · [Follow-up: exact SM120 capability matching, PR #1098](https://github.com/fla-org/flash-linear-attention/pull/1098)
+
+### PyTorch Lightning - submitted
+
+Diagnosed an optimizer-step versus batch-count mismatch that produced incorrect progress-bar totals and ETAs for iterable datasets with `max_steps` and gradient accumulation. Submitted a fix with parametrized regression tests.
+
+[PR #21802](https://github.com/Lightning-AI/pytorch-lightning/pull/21802)
+
+## LLM systems
+
+I work on self-hosted LLM services, structured document extraction, RAG, model evaluation, and production monitoring. My serving experience includes **SGLang and vLLM**, continuous batching, prefix caching, and GPU memory tuning.
+
+## Technical stack
+
+| Area | Tools and techniques |
+| --- | --- |
+| Models and training | Python, PyTorch, FSDP, BF16, torch.compile, gradient checkpointing, Hugging Face Transformers, Diffusers |
+| Inference and GPU optimization | SGLang, vLLM, Flash Linear Attention, TileLang, batched inference, KV caching |
+| Production and MLOps | FastAPI, Docker, Kubernetes, AWS, MLflow, Weights & Biases, pytest, CI/CD |
+
+## Connect
+
+[LinkedIn](https://www.linkedin.com/in/ankamma-rao-bandi-35ab7616b/) · [Hugging Face](https://huggingface.co/akrao9) · [Email](mailto:akraobandi98@gmail.com)
+
