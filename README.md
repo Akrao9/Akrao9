@@ -2,7 +2,7 @@
 
 Machine Learning Engineer focused on diffusion models, linear attention, and efficient training and inference. I build generative models and production LLM systems, and contribute fixes to open-source ML infrastructure.
 
-MS in Computer Science from New Jersey Institute of Technology.
+
 
 ## Featured project: Linarix
 
@@ -16,13 +16,13 @@ MS in Computer Science from New Jersey Institute of Technology.
 
 ## Open-source contributions
 
-### Flash Linear Attention - merged
+### Flash Linear Attention 
 
 Enabled FlashQLA BF16 forward dispatch on **NVIDIA SM120 Blackwell GPUs**, with gradient-state safeguards, dtype checks, and parity tests. Benchmarks on an RTX PRO 6000 Blackwell measured up to **2.62x forward-pass speedup over the Triton backend** for the tested GatedDeltaNet operator configurations.
 
 [PR #1094](https://github.com/fla-org/flash-linear-attention/pull/1094) · [Follow-up: exact SM120 capability matching, PR #1098](https://github.com/fla-org/flash-linear-attention/pull/1098)
 
-### PyTorch Lightning - submitted
+### PyTorch Lightning 
 
 Diagnosed an optimizer-step versus batch-count mismatch that produced incorrect progress-bar totals and ETAs for iterable datasets with `max_steps` and gradient accumulation. Submitted a fix with parametrized regression tests.
 
